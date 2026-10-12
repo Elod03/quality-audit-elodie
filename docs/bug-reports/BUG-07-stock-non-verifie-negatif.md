@@ -27,7 +27,7 @@ indépendant du stock, est contrôlé).
 Requête/réponse ci-dessus, exécutée le 21/09/2026. Stock confirmé négatif via
 `GET /api/products/22` → `{"stock": -2, ...}`.
 
-Même constat dans le navigateur et dans Swagger (22/09/2026, Marina) :
+Même constat dans le navigateur et dans Swagger (22/09/2026) :
 - produit « HORS STOCK » ajouté au panier, stock affiché ensuite à -2 :
   ![HORS STOCK ajouté au panier](../preuves/ui-hors-stock-ajoute-au-panier.png)
 - stock de Salmon Bowl à -2 dans `GET /api/restaurants/2/products` :

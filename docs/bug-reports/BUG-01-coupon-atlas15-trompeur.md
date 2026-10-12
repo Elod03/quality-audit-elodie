@@ -33,7 +33,7 @@ Réduction réelle : 10 % (2,50 €), soit 1,25 € de moins que ce qui est anno
 Requête/réponse ci-dessus, exécutée le 21/09/2026 contre l'instance locale `http://127.0.0.1:5000`.
 Texte de la promotion vu sur `/restaurant/5` : « utilisez le code ATLAS15 pour obtenir 15 % de réduction ».
 
-Même constat dans Swagger (22/09/2026, Marina), avec un sous-total de 32,50 € : `discount_percent: 10`,
+Même constat dans Swagger (22/09/2026), avec un sous-total de 32,50 € : `discount_percent: 10`,
 `discount: 3.25` au lieu de 4,88 € :
 ![ATLAS15 dans Swagger](../preuves/swagger-coupon-atlas15-10pourcent.png)
 

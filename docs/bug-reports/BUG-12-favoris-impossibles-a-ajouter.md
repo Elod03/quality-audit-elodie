@@ -23,7 +23,7 @@ Un bouton permet d'ajouter le restaurant aux favoris, et il apparaît ensuite da
   « favori » ni de lien vers `/favorite/...`, alors que cette route existe bien côté serveur.
 
 ## Preuve
-Capture de la fiche Green Kitchen, sans bouton favori (22/09/2026, Marina) :
+Capture de la fiche Green Kitchen, sans bouton favori (22/09/2026) :
 ![Pas de bouton favori](../preuves/ui-pas-de-bouton-favori.png)
 
 ## Sévérité

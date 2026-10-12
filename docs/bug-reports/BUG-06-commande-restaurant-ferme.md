@@ -30,7 +30,7 @@ Commande créée avec succès (HTTP 201) malgré le restaurant fermé.
 ## Preuve
 Requête/réponse ci-dessus, exécutée le 21/09/2026 (commande #8).
 
-Même constat dans le navigateur (22/09/2026, Marina) : le badge « FERMÉ » est affiché, et pourtant
+Même constat dans le navigateur (22/09/2026) : le badge « FERMÉ » est affiché, et pourtant
 l'ajout au panier puis la commande passent :
 ![Restaurant fermé, ajout au panier accepté](../preuves/ui-restaurant-ferme-ajout-panier.png)
 

@@ -38,7 +38,7 @@ La commande est refusée, avec un message qui indique le montant minimum à atte
 ```
 
 ## Preuve
-- Capture du checkout et de la confirmation (22/09/2026, Marina) :
+- Capture du checkout et de la confirmation (22/09/2026) :
   ![Commande validée sous le minimum](../preuves/ui-commande-sous-minimum-couscous-atlas.png)
 - Minimum de Burger Factory dans Swagger :
   ![Minimum Burger Factory](../preuves/swagger-burger-factory-minimum-20.png)
