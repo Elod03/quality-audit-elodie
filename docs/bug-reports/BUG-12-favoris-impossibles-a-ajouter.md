@@ -27,8 +27,8 @@ Capture de la fiche Green Kitchen, sans bouton favori (22/09/2026, Marina) :
 ![Pas de bouton favori](../preuves/ui-pas-de-bouton-favori.png)
 
 ## Sévérité
-Mineure. Pas d'impact sur la commande ni sur l'argent, mais une fonctionnalité annoncée est
-inutilisable.
+Mineure. Le problème n'a pas d'impact sur la commande ou le paiement, mais une fonctionnalité annoncée
+reste inutilisable.
 
 ## Priorité
 Moyenne. Le serveur sait déjà enregistrer un favori : il manque seulement le bouton dans l'interface.

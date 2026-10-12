@@ -1,8 +1,8 @@
 # BUG-01 : Le coupon ATLAS15 n'applique pas la réduction annoncée
 
 ## Contexte
-J'ai remarqué ce bug un peu par hasard en comparant le texte promo affiché sur la fiche restaurant et la
-réponse de l'API de validation de coupon. Le restaurant "Couscous Atlas" affiche une promotion
+Lors de la comparaison entre le texte promotionnel affiché sur la fiche restaurant et la réponse de
+l'API de validation du coupon, un écart a été constaté. Le restaurant "Couscous Atlas" affiche une promotion
 "🎟️ Code ATLAS15 annoncé comme -15% sur ce restaurant", et la fiche restaurant précise même "utilisez le
 code ATLAS15 pour obtenir 15 % de réduction". Sauf que le coupon réellement enregistré en base applique
 10 %, pas 15.
@@ -38,9 +38,9 @@ Même constat dans Swagger (22/09/2026, Marina), avec un sous-total de 32,50 €
 ![ATLAS15 dans Swagger](../preuves/swagger-coupon-atlas15-10pourcent.png)
 
 ## Sévérité
-Moyenne. Ça ne fait pas perdre d'argent à la plateforme (au contraire, elle donne moins que prévu), mais
-c'est le genre de truc qui énerve un client et qui peut finir en réclamation.
+Moyenne. La plateforme applique une réduction inférieure à celle annoncée, ce qui peut entraîner une
+réclamation client.
 
 ## Priorité
-Haute quand même, parce que le correctif est trivial : soit on aligne `discount_percent` sur 15 en base,
-soit on corrige le texte promo pour qu'il colle à la réalité.
+Haute, car le correctif est limité : il faut aligner `discount_percent` sur 15 en base ou corriger le
+texte promotionnel pour qu'il corresponde à la réduction réelle.

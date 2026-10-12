@@ -1,10 +1,9 @@
 # BUG-07 : Le stock n'est jamais vérifié : un produit en rupture reste commandable et le stock devient négatif
 
 ## Contexte
-En parcourant la fiche du restaurant Couscous Atlas, j'ai vu le produit "Tajine Légumes" (id=22) affiché
-avec la mention "HORS STOCK" (stock=0), mais le bouton "Ajouter" du panier restait cliquable juste à
-côté. Ça m'a mis la puce à l'oreille : soit c'est juste visuel, soit le serveur ne vérifie rien non plus.
-J'ai testé, et c'est la deuxième option.
+Sur la fiche du restaurant Couscous Atlas, le produit "Tajine Légumes" (id=22) est affiché
+avec la mention "HORS STOCK" (stock=0), mais le bouton "Ajouter" reste disponible. Le comportement a été
+vérifié via l'API.
 
 ## Préconditions
 Produit id=22, stock initial = 0, `available: true`, restaurant ouvert (pour isoler ce bug de BUG-06).
@@ -39,8 +38,8 @@ Même constat dans le navigateur et dans Swagger (22/09/2026, Marina) :
   ![Panier à 99](../preuves/ui-panier-quantite-99.png)
 
 ## Sévérité
-Haute. C'est de la survente structurelle : à chaque commande passée sur un produit épuisé, le stock
-s'enfonce un peu plus dans le négatif, sans qu'aucune alerte ne se déclenche nulle part.
+Haute. Il s'agit d'une survente : une commande passée sur un produit épuisé fait passer le stock dans
+le négatif, sans alerte.
 
 ## Priorité
 Haute. Il faut vérifier `product.stock >= quantity` avant toute création de commande (web et API), et

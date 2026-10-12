@@ -4,9 +4,8 @@ Séances réalisées le 12/10/2026 avec 2 participantes, sur 3 scénarios.
 
 ## Objectif
 
-La campagne de test (`execution-report.md`) dit ce qui est cassé. Les tests utilisateurs disent ce qui
-**gêne vraiment un client** : est-ce qu'une personne qui ne connaît pas l'appli tombe sur ces problèmes,
-les remarque, et à quel point ça la bloque ?
+La campagne de test (`execution-report.md`) recense les dysfonctionnements. Les tests utilisateurs
+permettent de vérifier lesquels sont visibles ou bloquants pour une personne qui découvre l'application.
 
 ## Protocole
 
@@ -17,7 +16,7 @@ les remarque, et à quel point ça la bloque ?
 - **Durée** : environ 5 minutes par personne (3 scénarios).
 - **Consigne donnée au participant** : « Je teste l'appli, pas toi. Il n'y a pas de mauvaise réponse.
   Pense à voix haute : dis ce que tu cherches et ce qui te surprend. »
-- **Règles pour l'observatrice** : lire chaque scénario à voix haute, ne pas montrer où cliquer, ne pas
+- **Règles pour l'observatrice** : lire chaque scénario à voix haute, ne pas montrer où cliquer et ne pas
   aider. Au-delà de 2 minutes de blocage, noter « échec » et passer au scénario suivant. Noter les
   phrases exactes entre guillemets, au moment où elles sont dites.
 
@@ -70,8 +69,9 @@ les remarque, et à quel point ça la bloque ?
 
 ## Problèmes relevés
 
-Un bloc par problème observé. La **fréquence** = nombre de participants qui ont rencontré le problème.
-L'**impact** : bloquant (n'a pas pu finir), gênant (a fini avec difficulté), mineur (remarqué sans gêne).
+Chaque bloc correspond à un problème observé. La **fréquence** indique le nombre de participantes
+concernées. L'**impact** est classé comme bloquant (scénario non terminé), gênant (scénario terminé avec
+difficulté) ou mineur (problème remarqué sans gêne importante).
 
 ### UF-01 : Le filtre des frais de livraison est difficile à trouver
 
@@ -145,10 +145,10 @@ L'**impact** : bloquant (n'a pas pu finir), gênant (a fini avec difficulté), m
 
 ## Ce qu'on en retient
 
-- **Le problème le plus net est invisible** : les 2 participantes ont validé le code ATLAS15 sans voir que
+- **Le problème le plus important est invisible** : les 2 participantes ont validé le code ATLAS15 sans voir que
   la réduction est de 10 % au lieu de 15 % (UF-04). Les tests utilisateurs confirment donc que BUG-01 ne
   sera pas signalé par les clients : il faut le corriger plutôt qu'attendre des réclamations.
-- **Les filtres ne sont pas utilisés** : aucune des deux n'a trouvé naturellement le filtre de frais de
+- **Les filtres sont difficiles à trouver** : aucune des deux n'a trouvé naturellement le filtre de frais de
   livraison (UF-01). Combiné au filtre inversé (BUG-02), ça rend la recherche par prix de livraison
   inutilisable en pratique.
 - **Les autres problèmes** (mots de passe, panier mono-restaurant, produits hors stock) n'ont touché

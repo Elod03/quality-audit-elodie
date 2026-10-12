@@ -1,9 +1,8 @@
 # Matrice des risques : QuickOrder V3.1
 
-Avant même de toucher à l'appli, j'ai listé les endroits où je m'attendais à trouver des problèmes, en
-me basant sur ce que je connais des applis de e-commerce/livraison (c'est souvent le paiement, les
-coupons et les contrôles d'accès qui posent problème). Ça m'a servi à décider où mettre le plus de cas
-de test.
+Avant la campagne, nous avons listé les zones susceptibles de poser problème, en nous basant sur les
+risques courants des applications de commande et de livraison : paiement, coupons et contrôle d'accès.
+Cette liste nous a servi à prioriser les cas de test.
 
 Échelle : Probabilité (1=faible, 3=élevée) × Impact (1=mineur, 3=critique). Score = P × I.
 
@@ -22,17 +21,17 @@ de test.
 | R11 | UI | Incohérence d'affichage entre montant panier et total réel | 2 | 1 | 2 | Basse |
 | R12 | API | Messages d'erreur incohérents entre endpoints (codes HTTP) | 2 | 1 | 2 | Basse |
 
-## Ce que j'en retiens
+## Ce que nous en retenons
 
-Les scores les plus élevés se concentrent sur les **coupons**, le **contrôle d'accès** (IDOR/admin) et le
-**panier/commande**, logique, ce sont les zones avec le plus de règles métier, donc le plus de façons
-de se tromper, et un impact réel (argent ou confidentialité) si ça casse.
+Les scores les plus élevés concernent les **coupons**, le **contrôle d'accès** (IDOR/admin) et le
+**panier/commande**. Ces zones concentrent plusieurs règles métier et peuvent avoir un impact direct sur
+l'argent ou la confidentialité.
 
 ## Vue d'ensemble par zone (Marina)
 
-Marina a fait la même priorisation à l'échelle des grandes zones de l'appli : plus un point est haut et
-à droite, plus il mérite d'effort de test et de preuves solides. Authentification, panier et paiement
-ressortent en tête, ce qui rejoint le tableau ci-dessus.
+Marina a réalisé une priorisation complémentaire à l'échelle des grandes zones de l'application. Plus un
+point est haut et à droite, plus il mérite d'efforts de test et de preuves. L'authentification, le panier
+et le paiement ressortent en tête, ce qui rejoint le tableau ci-dessus.
 
 ![Matrice Risque × Impact](preuves/matrice-risque-impact.jpg)
 
@@ -42,7 +41,7 @@ Comparaison faite après la campagne (voir `execution-report.md`) :
 
 - **Bien vu** : coupons (R1 → BUG-01), panier/commande, et le contrôle d'accès de l'API (BUG-03, plus
   large que l'IDOR imaginé en R2).
-- **Sous-estimé** : le stock (R9, notée « basse »), qui a donné l'un des bugs les plus graves (BUG-07).
+- **Sous-estimé** : le stock (R9, classé en priorité « basse »), qui a donné l'un des bugs les plus graves (BUG-07).
 - **Pas prévu** : le paiement (espèces BUG-04, doublon PayPal BUG-05), le restaurant fermé (BUG-06), le
   minimum de commande (BUG-11) et l'adresse de livraison (BUG-10).
 - **Pas couverts par un cas de test** : R2 (voir la commande d'un autre client), R3 (client sur l'espace

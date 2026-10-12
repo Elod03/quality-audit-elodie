@@ -1,8 +1,8 @@
 # BUG-04 : Un paiement en espèces inférieur au montant dû est accepté
 
 ## Contexte
-J'ai voulu tester le mode de paiement "espèces" après avoir vu qu'il existait dans le formulaire de
-checkout. Le principe : le client indique le montant remis (`cash_received`), et l'application est censée
+Le mode de paiement "espèces" permet au client d'indiquer le montant remis (`cash_received`).
+L'application doit
 calculer la monnaie à rendre en s'assurant que le montant remis couvre au moins le total de la commande.
 
 ## Préconditions

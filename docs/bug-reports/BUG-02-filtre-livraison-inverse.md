@@ -1,8 +1,8 @@
 # BUG-02 : Le filtre "frais de livraison maximum" retourne l'inverse de ce qui est demandé
 
 ## Contexte
-En testant les filtres de la page d'accueil un par un (recherche, catégorie, note, livraison), celui du
-frais de livraison m'a paru bizarre dès le premier essai. La page propose un filtre "livraison max X€"
+Lors du test des filtres de la page d'accueil, le filtre des frais de livraison a retourné un résultat
+inattendu. La page propose un filtre "livraison max X€"
 (`GET /?max_delivery=X`), et l'intention est évidemment d'afficher les restaurants dont les frais de
 livraison sont **inférieurs ou égaux** à X.
 
@@ -34,9 +34,8 @@ curl "http://127.0.0.1:5000/?max_delivery=2.50"
 "Burger Factory 2.99 €", "Night Sushi 2.99 €" (aucun restaurant ≤ 2,50 € affiché).
 
 ## Sévérité
-Moyenne. Pas de risque sécurité ou financier, mais la fonctionnalité fait littéralement l'inverse de ce
-qu'elle promet, ce qui est pire qu'une fonctionnalité absente.
+Moyenne. Il n'y a pas de risque de sécurité ou de perte financière directe, mais la fonctionnalité
+retourne l'inverse du résultat attendu.
 
 ## Priorité
-Haute quand même : le correctif est un simple changement d'opérateur de comparaison dans la requête SQL
-(`>=` → `<=`), donc autant le faire tout de suite.
+Haute : le correctif consiste à remplacer l'opérateur de comparaison dans la requête SQL (`>=` → `<=`).

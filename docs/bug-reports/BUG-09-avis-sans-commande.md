@@ -1,8 +1,8 @@
 # BUG-09 : Un avis peut être laissé sans avoir jamais commandé dans le restaurant
 
 ## Contexte
-Dernier bug de la liste, trouvé en fin de campagne en repassant sur les fonctionnalités "secondaires".
-La fiche restaurant propose un formulaire "Laisser un avis" (note + commentaire) accessible à tout
+Ce bug a été trouvé en fin de campagne lors de la vérification des fonctionnalités secondaires. La fiche
+restaurant propose un formulaire "Laisser un avis" (note + commentaire) accessible à tout
 utilisateur connecté, sans aucune vérification qu'il a effectivement commandé dans ce restaurant.
 
 ## Préconditions
@@ -31,9 +31,9 @@ Requête SQL exécutée le 21/09/2026 sur `quickorder.db` :
 `SELECT ... FROM "order" WHERE user=admin AND restaurant_id=5` → aucun résultat.
 
 ## Sévérité
-Je le mets entre basse et moyenne : ça n'impacte pas directement les transactions, mais ça fausse la
-fiabilité des notes/avis affichés aux futurs clients, rien n'empêche un faux avis, de complaisance ou
-carrément malveillant.
+Entre basse et moyenne : le problème n'impacte pas directement les transactions, mais il fausse la
+fiabilité des notes et des avis affichés aux futurs clients. Rien n'empêche actuellement un faux avis,
+de complaisance ou malveillant.
 
 ## Priorité
 Moyenne. Restreindre le formulaire d'avis aux utilisateurs ayant au moins une commande `delivered` pour

@@ -1,10 +1,10 @@
 # BUG-03 : L'API permet de lire, créer et annuler des commandes sans aucune authentification (usurpation du compte Alice)
 
 ## Contexte
-Celui-ci m'a fait tiquer dès que j'ai lu le code de l'API : tous les endpoints `/api/*` exigent
+L'analyse de l'API montre que tous les endpoints `/api/*` exigent
 uniquement l'en-tête `X-API-Key: quickorder-demo-key`, une clé **statique et documentée publiquement**
 dans le README du projet, sans aucun rapport avec la session ou le compte d'un utilisateur connecté.
-J'ai voulu vérifier ce que ça donnait en pratique : quand aucune session utilisateur n'est fournie, l'API
+En pratique, lorsque aucune session utilisateur n'est fournie, l'API
 agit silencieusement **au nom du compte client "Alice" par défaut**, sans jamais demander email ou mot
 de passe.
 
@@ -40,8 +40,8 @@ POST /api/orders/2/cancel → 200 {"id":2,"status":"cancelled",...}
 Aucune de ces 3 requêtes ne contenait de cookie de session ni d'identifiant lié à Alice.
 
 ## Sévérité
-Critique à mon avis, et c'est celui qui m'inquiète le plus de toute la campagne. Contrôle d'accès
-défaillant : n'importe qui connaissant la clé publique (documentée dans le dépôt lui-même) peut
+Critique. Le contrôle d'accès est défaillant : toute personne connaissant la clé publique (documentée
+dans le dépôt lui-même) peut
 consulter, créer ou annuler des commandes pour un vrai compte client, sans jamais prouver qui il est.
 
 ## Priorité

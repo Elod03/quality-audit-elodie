@@ -1,8 +1,8 @@
 # Plan d'amélioration : QuickOrder V3.1
 
-Voici ce que je proposerais de corriger, classé par priorité. Je me suis basée sur les 10 bugs trouvés
-pendant la campagne (`bug-reports/`), en essayant d'estimer à chaque fois si le correctif est simple ou
-demande plus de travail.
+Les améliorations sont classées par priorité. Elles s'appuient sur les 12 bugs trouvés pendant la
+campagne (`bug-reports/`) et sur les observations des tests utilisateurs. L'effort estimé indique si le
+correctif semble simple ou s'il demande une modification plus importante.
 
 | # | Amélioration | Justification | Priorité | Effort estimé |
 |---|---|---|---|---|
@@ -29,10 +29,10 @@ demande plus de travail.
 
 ## Ce qu'on ferait en premier
 
-Les corrections à faire avant tout le reste : #1, #4, #2, #3, #5, #12 et #13. Elles touchent toutes au
+Les corrections à faire avant tout le reste sont les suivantes : #1, #4, #2, #3, #5, #12 et #13. Elles touchent au
 cœur transactionnel (authentification, paiement, stock, adresse de livraison, minimum de commande), et ce
-sont aussi celles qui ont le plus petit rapport effort/impact : la plupart se corrigent en quelques
-lignes. #14 vient juste après, pour que l'interface reflète ces règles. Les améliorations #6 à #9 et #15
+sont aussi celles qui ont le meilleur rapport effort/impact. #14 vient juste après, pour que l'interface
+reflète ces règles. Les améliorations #6 à #9 et #15
 concernent plutôt la fiabilité des données affichées (statut, avis, promotions, favoris). #8 remonte en
 importance après les tests utilisateurs : aucune des 2 participantes n'a vu l'écart de réduction
 d'ATLAS15 (UF-04), donc le client est lésé sans le savoir. #18 à #20 viennent directement des difficultés vécues

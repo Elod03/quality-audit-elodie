@@ -1,7 +1,7 @@
 # BUG-10 : Une commande peut être confirmée avec une adresse de livraison vide
 
 ## Contexte
-En s'inscrivant, chaque nouvel utilisateur reçoit automatiquement une adresse "Domicile" créée avec des
+Lors de l'inscription, chaque nouvel utilisateur reçoit automatiquement une adresse "Domicile" créée avec des
 champs **vides** (`street=""`, `postal_code=""`, `city=""`). Cette adresse est ensuite proposée par
 défaut au checkout, sans qu'aucun contrôle n'empêche de commander avec.
 
@@ -21,7 +21,7 @@ renseignés, comme c'est déjà le cas pour l'ajout manuel d'une adresse dans le
 champs.
 
 ## Résultat obtenu
-La commande est confirmée sans erreur (redirection vers `/orders/2`, aucun message de blocage). Vérifié
+La commande est confirmée sans erreur (redirection vers `/orders/2`, aucun message de blocage). La vérification
 en base :
 ```
 Address(id=3, street='', postal_code='', city='', label='Domicile')

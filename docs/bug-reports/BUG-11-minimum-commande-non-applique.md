@@ -45,8 +45,8 @@ La commande est refusée, avec un message qui indique le montant minimum à atte
 - Requête API ci-dessus, rejouée le 12/10/2026 sur une base neuve (`seed.py`).
 
 ## Sévérité
-Majeure. Le restaurant reçoit des commandes qu'il n'accepte pas commercialement (une barquette de
-frites livrée pour 3,50 €), et la règle affichée au client n'est pas tenue.
+Majeure. Le restaurant reçoit des commandes inférieures au minimum annoncé (par exemple, une portion de
+frites à 3,50 € pour un minimum de 20 €), et la règle affichée au client n'est pas appliquée.
 
 ## Priorité
 Haute. La vérification `subtotal >= restaurant.minimum_order` est simple à ajouter au checkout et dans

@@ -1,8 +1,8 @@
 # BUG-05 : Un paiement PayPal crée deux commandes identiques
 
 ## Contexte
-Celui-là, je ne l'ai vu qu'en comparant des compteurs avant/après, rien dans la réponse de l'API ne le
-laissait deviner. Lors du passage d'une commande avec le mode de paiement PayPal, une seconde commande
+Le problème a été identifié en comparant le nombre de commandes avant et après un paiement. Rien dans la
+réponse de l'API ne le signalait. Lors du passage d'une commande avec le mode de paiement PayPal, une seconde commande
 strictement identique (mêmes articles, même montant) est créée silencieusement, sans que le client n'en
 soit informé ni que l'API n'en fasse mention dans sa réponse.
 
@@ -30,9 +30,8 @@ même montant, et le même décrément de stock produit appliqué deux fois.
 Séquence exécutée le 21/09/2026 : count 3 → POST paypal (réponse : 1 commande id=4) → count 5.
 
 ## Sévérité
-Je le classe en critique : double facturation potentielle côté paiement réel, double décrément de stock
-(ça aggrave aussi BUG-07), et une commande "invisible" qui existe sur le compte du client sans qu'il le
-sache.
+Critique : double facturation potentielle côté paiement réel, double décrément de stock (ce qui aggrave
+également BUG-07) et création d'une commande invisible pour le client.
 
 ## Priorité
 Très haute. Il faut corriger la logique de création de commande pour PayPal afin qu'elle ne crée qu'un

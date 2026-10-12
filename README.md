@@ -1,11 +1,9 @@
 # Audit qualité : QuickOrder V3.1
 
 Ce dépôt contient notre travail d'audit QA pour le cours **Tests et qualité des solutions numériques**,
-fait en groupe par **Elodie** et **Marina**.
-L'idée du TP : QuickOrder est prêt à être mis en ligne, et on doit se mettre dans la peau d'une équipe QA
-qui vérifie si c'est vraiment le cas avant de donner le feu vert.
-
-Spoiler : non, pas encore (voir `execution-report.md`).
+réalisé en groupe par **Elodie** et **Marina**.
+L'objectif est de vérifier si QuickOrder peut être mis en ligne dans de bonnes conditions.
+La conclusion de la campagne est présentée dans `docs/execution-report.md`.
 
 ## Ce qu'il y a dedans
 
@@ -26,6 +24,6 @@ QuickOrder V3.1 (Flask / Flask-SQLAlchemy / SQLite), lancée en local via Docker
 (`docker compose up --build`) ou Python (`python seed.py` puis `python run.py`) sur
 `http://127.0.0.1:5000`, API sur `/api`, Swagger sur `/docs/`.
 
-Comme demandé dans le brief, on n'a touché à aucune ligne du code source de QuickOrder pendant la
-campagne : tout ce qui est décrit ici vient de l'usage réel de l'appli (navigateur, Swagger, API, requêtes
-en base pour vérifier certains états).
+Comme demandé dans le brief, nous n'avons modifié aucune ligne du code source de QuickOrder pendant la
+campagne. Les résultats viennent de l'utilisation réelle de l'application : navigateur, Swagger, API et
+requêtes en base pour vérifier certains états.

@@ -1,9 +1,9 @@
 # BUG-08 : L'administrateur peut faire revenir une commande à un statut antérieur
 
 ## Contexte
-En regardant l'espace admin, j'ai vu que le statut d'une commande se change via un simple menu déroulant
+Dans l'espace admin, le statut d'une commande se change via un menu déroulant
 parmi `confirmed, preparing, out_for_delivery, delivered, cancelled`, sans aucune règle de transition
-visible. Je me suis demandé si on pouvait revenir en arrière (ex. repasser une commande "livrée" à
+visible. Le test a vérifié s'il était possible de revenir en arrière (par exemple, repasser une commande "livrée" à
 "confirmée"), ce qui n'a normalement aucun sens.
 
 ## Préconditions
@@ -31,5 +31,5 @@ Moyenne. Pas de risque financier direct, mais ça casse la fiabilité du suivi d
 peut fausser les statistiques d'exploitation si un statut "livré" redevient "en attente" sans raison.
 
 ## Priorité
-Moyenne. Je proposerais une machine à états explicite qui limite les transitions autorisées, avec
-idéalement un historique des changements de statut pour garder une trace.
+Moyenne. Une machine à états explicite devrait limiter les transitions autorisées. Un historique des
+changements de statut serait également utile.
