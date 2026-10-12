@@ -59,6 +59,6 @@ confidentialité.
 
 ## Quand est-ce que j'arrête
 
-Nous arrêtons la campagne lorsque les 44 cas (27 pour Elodie et 17 pour Marina) sont exécutés et
+Nous arrêtons la campagne lorsque les 44 cas sont exécutés et
 documentés, que les bugs bloquants sont reproduits proprement et qu'un avis Go/No-Go peut être justifié
 par des preuves.

@@ -8,7 +8,7 @@ La campagne a été menée à deux, avec deux approches complémentaires :
   `docker compose up --build`, base réinitialisée par `seed.py`. Exécution des cas contre l'API (curl et
   requêtes directes) et les pages web (HTML rendu), avec quelques vérifications en base SQLite quand
   l'info n'était pas visible depuis l'interface (ex : stock réel d'un produit).
-- **Marina** (cas `TC-M`, 22/09/2026) : parcours joués dans le **navigateur** et dans **Swagger**
+- **Seconde série de tests** (cas `TC-M`, 22/09/2026) : parcours joués dans le **navigateur** et dans **Swagger**
   (`/docs/`, bouton Authorize avec la clé `quickorder-demo-key`), avec captures d'écran à l'appui.
 - **DevTools** (onglet Réseau, 12/10/2026) : observation des requêtes envoyées pendant une commande
   passée depuis l'interface. Le `POST /checkout` répond `302` et redirige vers la page de la commande
@@ -64,7 +64,7 @@ livraison, qui concentrent pourtant une bonne partie des bugs trouvés.
    peut être posté sans avoir jamais commandé.
 7. **Une commande confirmée sans adresse valide** (BUG-10), trouvé en testant le parcours d'un nouveau
    compte : l'adresse créée automatiquement à l'inscription est vide, et rien n'empêche de payer avec.
-8. **Le minimum de commande ignoré** (BUG-11), trouvé par Marina : il est affiché sur chaque restaurant
+8. **Le minimum de commande ignoré** (BUG-11), observé pendant la campagne : il est affiché sur chaque restaurant
    mais jamais vérifié, une commande à 3,50 € passe chez un restaurant qui exige 20 €.
 9. **Une fonctionnalité annoncée inutilisable** (BUG-12). La section « Favoris » existe dans le profil
    mais aucun bouton ne permet d'y ajouter un restaurant.

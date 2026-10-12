@@ -10,7 +10,7 @@ permettent de vérifier lesquels sont visibles ou bloquants pour une personne qu
 ## Protocole
 
 - **Participants** : 2 personnes extérieures au projet, qui découvrent QuickOrder. P2 est une camarade de
-  classe qui s'appelle aussi Marina, mais ce n'est pas la Marina du binôme.
+  classe, différente des membres du binôme.
 - **Environnement** : QuickOrder lancé en local (`http://127.0.0.1:5000`), base remise à zéro avec
   `python seed.py` avant chaque participant, pour que tout le monde parte du même état.
 - **Durée** : environ 5 minutes par personne (3 scénarios).
@@ -25,7 +25,7 @@ permettent de vérifier lesquels sont visibles ou bloquants pour une personne qu
 | ID | Profil (âge, études/métier) | Habitude des applis de livraison | Appareil / navigateur | Date |
 |---|---|---|---|---|
 | P1 | Kavisha, 21 ans | parfois | ordinateur (appli lancée en local) | 12/10/2026 |
-| P2 | Marina (camarade de classe, pas la Marina du binôme), âge non renseigné | souvent | ordinateur (appli lancée en local) | 12/10/2026 |
+| P2 | Camarade de classe, âge non renseigné | souvent | ordinateur (appli lancée en local) | 12/10/2026 |
 
 ## Scénarios
 

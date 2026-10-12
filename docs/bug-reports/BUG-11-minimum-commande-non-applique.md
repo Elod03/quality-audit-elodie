@@ -1,7 +1,7 @@
 # BUG-11 : Le minimum de commande du restaurant n'est jamais appliqué
 
 ## Contexte
-Trouvé par Marina pendant sa campagne dans le navigateur. Chaque restaurant affiche un « minimum de
+Le test dans le navigateur a montré que chaque restaurant affiche un « minimum de
 commande » (Burger Factory : 20 €, Couscous Atlas : 25 €), sur sa fiche et dans le récapitulatif du
 checkout. Ce minimum est affiché mais jamais vérifié au moment de valider la commande, ni dans
 l'interface ni dans l'API.

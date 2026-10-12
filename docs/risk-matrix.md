@@ -27,9 +27,9 @@ Les scores les plus élevés concernent les **coupons**, le **contrôle d'accès
 **panier/commande**. Ces zones concentrent plusieurs règles métier et peuvent avoir un impact direct sur
 l'argent ou la confidentialité.
 
-## Vue d'ensemble par zone (Marina)
+## Vue d'ensemble par zone
 
-Marina a réalisé une priorisation complémentaire à l'échelle des grandes zones de l'application. Plus un
+Une priorisation complémentaire a été réalisée à l'échelle des grandes zones de l'application. Plus un
 point est haut et à droite, plus il mérite d'efforts de test et de preuves. L'authentification, le panier
 et le paiement ressortent en tête, ce qui rejoint le tableau ci-dessus.
 

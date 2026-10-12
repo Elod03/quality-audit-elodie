@@ -1,7 +1,7 @@
 # BUG-12 : Impossible d'ajouter un restaurant aux favoris
 
 ## Contexte
-Trouvé par Marina. Le profil contient une section « Favoris » et le README annonce la fonctionnalité
+Pendant la campagne, nous avons constaté que le profil contient une section « Favoris » et que le README annonce la fonctionnalité
 « favoris restaurants », mais aucune page ne propose de bouton pour ajouter un restaurant aux favoris.
 La section reste donc toujours vide.
 
