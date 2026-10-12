@@ -28,6 +28,16 @@ indépendant du stock, est contrôlé).
 Requête/réponse ci-dessus, exécutée le 21/09/2026. Stock confirmé négatif via
 `GET /api/products/22` → `{"stock": -2, ...}`.
 
+Même constat dans le navigateur et dans Swagger (22/09/2026, Marina) :
+- produit « HORS STOCK » ajouté au panier, stock affiché ensuite à -2 :
+  ![HORS STOCK ajouté au panier](../preuves/ui-hors-stock-ajoute-au-panier.png)
+- stock de Salmon Bowl à -2 dans `GET /api/restaurants/2/products` :
+  ![Stock négatif dans Swagger](../preuves/swagger-salmon-bowl-stock-negatif.png)
+- commande créée (201) dans Swagger sur Tofu Bowl, affiché à stock 0 :
+  ![Commande Tofu Bowl dans Swagger](../preuves/swagger-commande-tofu-bowl-stock-0.png)
+- quantité 99 acceptée dans le panier pour un produit à stock 98, puis commandée :
+  ![Panier à 99](../preuves/ui-panier-quantite-99.png)
+
 ## Sévérité
 Haute. C'est de la survente structurelle : à chaque commande passée sur un produit épuisé, le stock
 s'enfonce un peu plus dans le négatif, sans qu'aucune alerte ne se déclenche nulle part.

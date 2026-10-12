@@ -59,5 +59,6 @@ d'impact (argent ou confidentialité).
 
 ## Quand est-ce que j'arrête
 
-Quand les 26 cas sont exécutés et documentés, que tous les bugs bloquants trouvés sont reproduits
-proprement, et que j'ai un avis Go/No-Go que je peux justifier avec des preuves plutôt que "je pense que".
+Quand les 44 cas (27 d'Elodie, 17 de Marina) sont exécutés et documentés, que tous les bugs bloquants
+trouvés sont reproduits proprement, et qu'on a un avis Go/No-Go justifiable avec des preuves plutôt que
+"je pense que".
