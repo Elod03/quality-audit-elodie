@@ -1,7 +1,7 @@
 # Audit qualité : QuickOrder V3.1
 
 Ce dépôt contient notre travail d'audit QA pour le cours **Tests et qualité des solutions numériques**,
-réalisé en groupe par **Elodie** et **Marina**.
+réalisé en groupe.
 L'objectif est de vérifier si QuickOrder peut être mis en ligne dans de bonnes conditions.
 La conclusion de la campagne est présentée dans `docs/execution-report.md`.
 
