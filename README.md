@@ -10,10 +10,10 @@ La conclusion de la campagne est présentée dans `docs/execution-report.md`.
 - `docs/test-strategy.md` : ce qu'on a décidé de tester (et pas tester), et pourquoi
 - `docs/risk-matrix.md` : les zones qui nous semblaient les plus dangereuses avant de commencer, et ce
   que la campagne en a confirmé
-- `docs/test-cases.xlsx` : nos 44 cas de test (nominaux, limites, erreurs, règles métier), avec qui les a
+- `docs/test-cases.xlsx` : nos 24 cas de test minimum (6 nominaux, 6 limites, 6 erreurs, 6 règles métier), avec qui les a
   exécutés et où trouver la preuve
 - `docs/execution-report.md` : les résultats une fois tout exécuté, et notre avis Go/No-Go
-- `docs/bug-reports/` : les 12 bugs reproduits, avec preuve à chaque fois
+- `docs/bug-reports/` : les 8 bugs principaux reproduits, avec preuve à chaque fois
 - `docs/preuves/` : les captures d'écran (navigateur, DevTools et Swagger)
 - `docs/user-feedback.md` : les tests utilisateurs (2 participantes, 3 scénarios) et ce qu'on en retient
 - `docs/improvement-plan.md` : ce qu'on proposerait de corriger en premier

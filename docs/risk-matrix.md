@@ -39,8 +39,7 @@ et le paiement ressortent en tête, ce qui rejoint le tableau ci-dessus.
 
 Comparaison faite après la campagne (voir `execution-report.md`) :
 
-- **Bien vu** : coupons (R1 → BUG-01), panier/commande, et le contrôle d'accès de l'API (BUG-03, plus
-  large que l'IDOR imaginé en R2).
+- **Bien vu** : coupons (R1 → BUG-01), panier/commande et contrôle d'accès de l'API (BUG-03).
 - **Sous-estimé** : le stock (R9, classé en priorité « basse »), qui a donné l'un des bugs les plus graves (BUG-07).
 - **Pas prévu** : le paiement (espèces BUG-04, doublon PayPal BUG-05), le restaurant fermé (BUG-06), le
   minimum de commande (BUG-11) et l'adresse de livraison (BUG-10).
