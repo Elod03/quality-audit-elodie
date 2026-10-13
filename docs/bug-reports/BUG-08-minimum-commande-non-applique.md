@@ -1,4 +1,4 @@
-# BUG-11 : Le minimum de commande du restaurant n'est jamais appliqué
+# BUG-08 : Le minimum de commande du restaurant n'est jamais appliqué
 
 ## Contexte
 Le test dans le navigateur a montré que chaque restaurant affiche un « minimum de

@@ -1,4 +1,4 @@
-# BUG-04 : Un paiement en espèces inférieur au montant dû est accepté
+# BUG-03 : Un paiement en espèces inférieur au montant dû est accepté
 
 ## Contexte
 Le mode de paiement "espèces" permet au client d'indiquer le montant remis (`cash_received`).

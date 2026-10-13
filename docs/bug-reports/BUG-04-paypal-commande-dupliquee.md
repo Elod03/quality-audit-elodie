@@ -1,4 +1,4 @@
-# BUG-05 : Un paiement PayPal crée deux commandes identiques
+# BUG-04 : Un paiement PayPal crée deux commandes identiques
 
 ## Contexte
 Le problème a été identifié en comparant le nombre de commandes avant et après un paiement. Rien dans la
@@ -31,7 +31,7 @@ Séquence exécutée le 21/09/2026 : count 3 → POST paypal (réponse : 1 comma
 
 ## Sévérité
 Critique : double facturation potentielle côté paiement réel, double décrément de stock (ce qui aggrave
-également BUG-07) et création d'une commande invisible pour le client.
+également BUG-06) et création d'une commande invisible pour le client.
 
 ## Priorité
 Très haute. Il faut corriger la logique de création de commande pour PayPal afin qu'elle ne crée qu'un

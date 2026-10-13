@@ -1,4 +1,4 @@
-# BUG-06 : Il est possible de commander auprès d'un restaurant fermé
+# BUG-05 : Il est possible de commander auprès d'un restaurant fermé
 
 ## Contexte
 Le restaurant "Night Sushi" (id=6) est renvoyé par l'API avec `is_open: false` ("Fermé aujourd'hui").

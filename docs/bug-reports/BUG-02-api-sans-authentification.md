@@ -1,4 +1,4 @@
-# BUG-03 : L'API permet de lire, créer et annuler des commandes sans aucune authentification (usurpation du compte Alice)
+# BUG-02 : L'API permet de lire, créer et annuler des commandes sans aucune authentification (usurpation du compte Alice)
 
 ## Contexte
 L'analyse de l'API montre que tous les endpoints `/api/*` exigent

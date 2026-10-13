@@ -1,4 +1,4 @@
-# BUG-10 : Une commande peut être confirmée avec une adresse de livraison vide
+# BUG-07 : Une commande peut être confirmée avec une adresse de livraison vide
 
 ## Contexte
 Lors de l'inscription, chaque nouvel utilisateur reçoit automatiquement une adresse "Domicile" créée avec des

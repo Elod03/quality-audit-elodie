@@ -1,4 +1,4 @@
-# BUG-07 : Le stock n'est jamais vérifié : un produit en rupture reste commandable et le stock devient négatif
+# BUG-06 : Le stock n'est jamais vérifié : un produit en rupture reste commandable et le stock devient négatif
 
 ## Contexte
 Sur la fiche du restaurant Couscous Atlas, le produit "Tajine Légumes" (id=22) est affiché
@@ -6,7 +6,7 @@ avec la mention "HORS STOCK" (stock=0), mais le bouton "Ajouter" reste disponibl
 vérifié via l'API.
 
 ## Préconditions
-Produit id=22, stock initial = 0, `available: true`, restaurant ouvert (pour isoler ce bug de BUG-06).
+Produit id=22, stock initial = 0, `available: true`, restaurant ouvert (pour isoler ce bug de BUG-05).
 
 ## Étapes de reproduction
 1. Constater sur `GET /api/products/22` : `"stock": 0`.
