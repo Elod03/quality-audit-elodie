@@ -11,7 +11,7 @@ La conclusion de la campagne est présentée dans `docs/execution-report.md`.
 - `docs/risk-matrix.md` : les zones qui nous semblaient les plus dangereuses avant de commencer, et ce
   que la campagne en a confirmé
 - `docs/test-cases.xlsx` : nos 24 cas de test minimum (6 nominaux, 6 limites, 6 erreurs, 6 règles métier), avec qui les a
-  exécutés et où trouver la preuve
+  exécutés et où trouver la preuve (même contenu lisible directement sur GitHub dans `docs/test-cases.md`)
 - `docs/execution-report.md` : les résultats une fois tout exécuté, et notre avis Go/No-Go
 - `docs/bug-reports/` : les 8 bugs principaux reproduits, avec preuve à chaque fois
 - `docs/preuves/` : les captures d'écran (navigateur, DevTools et Swagger)
