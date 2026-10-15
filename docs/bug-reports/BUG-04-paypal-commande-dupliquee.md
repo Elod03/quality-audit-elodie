@@ -30,7 +30,7 @@ même montant, et le même décrément de stock produit appliqué deux fois.
 Séquence exécutée le 21/09/2026 : count 3 → POST paypal (réponse : 1 commande id=4) → count 5.
 
 ## Sévérité
-Critique : double facturation potentielle côté paiement réel, double décrément de stock (ce qui aggrave
+Critique. Double facturation potentielle côté paiement réel, double décrément de stock (ce qui aggrave
 également BUG-06) et création d'une commande invisible pour le client.
 
 ## Priorité

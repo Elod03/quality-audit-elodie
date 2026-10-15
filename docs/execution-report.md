@@ -5,6 +5,11 @@
 La campagne a utilisé le navigateur, Swagger, l’API, les DevTools et quelques vérifications dans la base SQLite.
 La base de test a été réinitialisée lorsque cela était nécessaire.
 
+Exemple d’utilisation des DevTools (12/10/2026) : dans l’onglet Network, la validation du checkout envoie
+`POST /checkout`, le serveur répond `302` et redirige vers la page de la commande créée.
+
+![Onglet Network pendant un checkout](preuves/devtools-network-checkout-302.png)
+
 ## Résultats globaux
 
 | Statut | Nombre | Pourcentage |
@@ -37,6 +42,15 @@ le paiement, le stock et la sécurité.
 - **BUG-06** : un produit hors stock peut être commandé et le stock devient négatif.
 - **BUG-07** : une commande peut être confirmée avec une adresse vide.
 - **BUG-08** : le minimum de commande n’est pas appliqué.
+
+## Principaux risques
+
+| Risque | Bugs | Conséquence |
+|---|---|---|
+| Sécurité | BUG-02 | N’importe qui peut lire, créer ou annuler les commandes d’un client avec la seule clé publique. |
+| Argent | BUG-03, BUG-04, BUG-01 | Paiements incomplets acceptés, commandes en double, réduction différente de celle annoncée. |
+| Stock et restaurant | BUG-05, BUG-06, BUG-08 | Commandes acceptées sur des produits épuisés, chez un restaurant fermé ou sous le minimum. |
+| Livraison | BUG-07 | Commandes confirmées sans adresse, donc impossibles à livrer. |
 
 ## Décision finale
 

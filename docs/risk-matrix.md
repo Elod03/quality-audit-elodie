@@ -45,4 +45,6 @@ Comparaison faite après la campagne (voir `execution-report.md`) :
   minimum de commande (BUG-08) et l'adresse de livraison (BUG-07).
 - **Pas couverts par un cas de test** : R2 (voir la commande d'un autre client), R3 (client sur l'espace
   admin), R5 (annulation au mauvais statut) et R10 (note hors échelle).
-- **Bornes de quantité (R6)** : bien contrôlées (1 à 20), les cas limites correspondants passent.
+- **Bornes de quantité (R6)** : contrôlées par l'API (1 à 20), les cas limites correspondants passent. Sur le
+  site en revanche, aucune limite haute : une quantité de 99 a été acceptée dans le panier puis commandée (voir
+  BUG-06).

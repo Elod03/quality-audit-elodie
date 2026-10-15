@@ -53,11 +53,14 @@ admin, et l'API dans son ensemble.
 
 ## Priorisation
 
-Détaillée dans `risk-matrix.md`. Les coupons, le contrôle d'accès et la logique panier/commande ont reçu
-le plus de cas de test, car une erreur dans ces zones peut avoir un impact sur l'argent ou la
-confidentialité.
+Détaillée dans `risk-matrix.md`. La logique panier/commande (paiement, stock, quantités) et les coupons ont
+reçu le plus de cas de test, car une erreur dans ces zones a un impact direct sur l'argent.
 
-## Quand est-ce que j'arrête
+Prévu au départ mais finalement pas couvert par un cas de test : l'accès à la commande d'un autre client
+(IDOR), l'accès d'un client à l'espace admin, l'annulation au mauvais statut et les avis (voir
+`risk-matrix.md`).
+
+## Quand arrêter la campagne
 
 Nous arrêtons la campagne lorsque les 24 cas minimum sont exécutés et
 documentés, que les bugs bloquants sont reproduits proprement et qu'un avis Go/No-Go peut être justifié
